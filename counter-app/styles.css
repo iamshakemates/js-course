@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 3rem;
+  max-width: 500px;
+  min-height: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+  background-image: radial-gradient(whitesmoke, papayawhip);
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+#count-el {
+  margin: 1.5rem;
+  font-size: 5rem;
+}
+
+.btn {
+  display: block;
+  margin: 5px auto;
+  min-width: 200px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 6px;
+}
+
+#increment-btn:hover {
+  min-width: 200px;
+  background-color: blue;
+  color: whitesmoke;
+}
+
+#save-btn:hover {
+  background-color: green;
+  color: whitesmoke;
+}
