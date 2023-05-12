@@ -1,6 +1,6 @@
 // VARIABLE DECLARATION
-let fisrtCard = 1;
-let secondCard = 2;
+let fisrtCard = getRandomNumber();
+let secondCard = getRandomNumber();
 
 let sumEL = document.getElementById("sum-el");
 let messageEL = document.getElementById("message-el");
@@ -14,6 +14,11 @@ let cards = fisrtCard + " " + secondCard;
 let cardo = [fisrtCard, secondCard];
 
 // FUNCTION DECLARATION
+function getRandomNumber() {
+  let randomNum = Math.floor(Math.random() * 10) + 1;
+  return randomNum;
+}
+
 function startBtn() {
   renderFn();
 }
@@ -39,20 +44,8 @@ function renderFn() {
 }
 
 function newBtn() {
-  let newCard = 18;
+  let newCard = getRandomNumber();
   cardo.push(newCard);
   sum += newCard;
   renderFn();
 }
-
-// let messeageEL = document.getElementById("paragraph");
-
-// let first = 10;
-// let second = 11;
-
-// let numbers = [first, second];
-
-// for (let i = 0; i < numbers.length; i++) {
-//   messageEL.textContent += numbers[i] + " ";
-//   console.log(numbers);
-// }
