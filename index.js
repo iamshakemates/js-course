@@ -11,6 +11,7 @@ let message = "";
 
 let sum = fisrtCard + secondCard;
 let cards = fisrtCard + " " + secondCard;
+let cardo = [fisrtCard, secondCard];
 
 // FUNCTION DECLARATION
 function startBtn() {
@@ -19,7 +20,11 @@ function startBtn() {
 
 function renderFn() {
   sumEL.textContent = "Sum: " + sum;
-  cardsEL.textContent = "Cards: " + cards;
+  cardsEL.textContent = "Cards: ";
+
+  for (let x = 0; x < cardo.length; x++) {
+    cardsEL.textContent += cardo[x] + " ";
+  }
 
   if (sum < 21) {
     message = "Draw new card?";
@@ -35,7 +40,19 @@ function renderFn() {
 
 function newBtn() {
   let newCard = 18;
-  cards = cards + " " + newCard;
+  cardo.push(newCard);
   sum += newCard;
   renderFn();
 }
+
+// let messeageEL = document.getElementById("paragraph");
+
+// let first = 10;
+// let second = 11;
+
+// let numbers = [first, second];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   messageEL.textContent += numbers[i] + " ";
+//   console.log(numbers);
+// }
