@@ -15,8 +15,14 @@ let cardo = [fisrtCard, secondCard];
 
 // FUNCTION DECLARATION
 function getRandomNumber() {
-  let randomNum = Math.floor(Math.random() * 10) + 1;
-  return randomNum;
+  let randomNum = Math.floor(Math.random() * 12) + 1;
+  if (randomNum > 10) {
+    return 10;
+  } else if (randomNum === 1) {
+    return 11;
+  } else {
+    return randomNum;
+  }
 }
 
 function startBtn() {
@@ -36,16 +42,18 @@ function renderFn() {
   } else if (sum === 21) {
     message = "You've got blackjack";
     hasBlackjack = true;
-    console.log(hasBlackjack);
   } else {
     message = "You're out of the game";
+    isAlive = false;
   }
   messageEL.textContent = message;
 }
 
 function newBtn() {
-  let newCard = getRandomNumber();
-  cardo.push(newCard);
-  sum += newCard;
-  renderFn();
+  if (isAlive === true && hasBlackjack === false) {
+    let newCard = getRandomNumber();
+    cardo.push(newCard);
+    sum += newCard;
+    renderFn();
+  }
 }
