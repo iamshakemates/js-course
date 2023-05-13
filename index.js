@@ -8,12 +8,20 @@ let cardsEL = document.getElementById("cards-el");
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
+let nameEL = document.getElementById("name-el");
 
 let sum = fisrtCard + secondCard;
 let cards = fisrtCard + " " + secondCard;
 let cardo = [fisrtCard, secondCard];
 
+let player = {
+  name: "Jaypee",
+  chips: 150,
+};
+
 // FUNCTION DECLARATION
+nameEL.textContent = player.name + ": $" + player.chips;
+
 function getRandomNumber() {
   let randomNum = Math.floor(Math.random() * 12) + 1;
   if (randomNum > 10) {
