@@ -1,15 +1,28 @@
-// function handleClick() {
-//   console.log("Button clicked");
-// }
+let myLeads = [];
 
-let handleClick = document.getElementById("input-btn");
+const inputEl = document.getElementById("input-el");
+const saveEl = document.getElementById("save-el");
+const ulEl = document.getElementById("ul-el");
 
-handleClick.addEventListener("click", function () {
-  console.log("Button clicked");
+saveEl.addEventListener("click", function () {
+  myLeads.push(inputEl.value);
+  inputEl.value = "";
+  renderLeads();
 });
 
-let boxBtn = document.getElementById("sidetrack");
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += `<li>
+      <a target= '_blank' href = '${myLeads[i]}'>${myLeads[i]}</a>
+      </li>`;
+    // below is for reference:
+    // -------------------------------------
+    // let li = document.createElement("li");
+    // li.textContent = inputArr[i];
+    // ulEl.append(li);
+  }
+  ulEl.innerHTML = listItems;
+}
 
-boxBtn.addEventListener("click", function () {
-  console.log("Sidetrack is clicked");
-});
+// 5f9341
