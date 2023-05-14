@@ -24,5 +24,3 @@ function renderLeads() {
   }
   ulEl.innerHTML = listItems;
 }
-
-// 5f9341
