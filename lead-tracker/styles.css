@@ -22,6 +22,15 @@ body {
   background-color: #5f9341;
   color: white;
 }
+
+#tab-el {
+  padding: 10px 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: #5f9341;
+  color: white;
+}
+
 #delete-el {
   padding: 10px 10px;
   margin-top: 10px;
