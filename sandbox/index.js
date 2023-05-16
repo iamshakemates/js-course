@@ -1,61 +1,14 @@
-const todos = [
-  {
-    id: 1,
-    task: "Throw the trash",
-    isDone: true,
-  },
-  {
-    id: 2,
-    task: "Code for 30 min",
-    isDone: true,
-  },
-  {
-    id: 3,
-    task: "Order food",
-    isDone: false,
-  },
-];
+function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = new Date(dob);
+}
 
-// const todoText = todos.map(function (todo) {
-//   return todo.task;
-// });
+Person.prototype.getYear = function () {
+  return this.dob.getFullYear();
+};
 
-// console.log(todoText);
+const person1 = new Person("John", "Doe", "06-19-1995");
 
-let todoCompleted = todos
-  .filter(function (todo) {
-    return todo.isDone === true;
-  })
-  .map(function (todo) {
-    return todo.task;
-  });
-
-console.log(todoCompleted);
-
-// for-each
-// todos.forEach(function (todo) {
-//   console.log(todo.task);
-// });
-
-// const todoJSON = JSON.stringify(todos);
-
-// console.log(todoJSON);
-
-// const shoes = ["nike", "jordan", "reebok"];
-
-// // while loop
-// let i = 0;
-// while (i < 3) {
-//   console.log(shoes[i]);
-//   i++;
-// }
-
-// // for loop
-// for (let i = 0; i < 3; i++) {
-//   console.log(shoes[i]);
-// }
-
-// //  for-of loop
-// for (let shoe of shoes) {
-//   console.log(shoe);
-// }
+console.log(person1.getYear());
+GIT;
